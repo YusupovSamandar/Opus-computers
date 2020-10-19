@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPUS Computers</title>
+    <!-- Fonts Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <link rel="stylesheet" href="css/imagehover.min.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a style="margin-right: 250px;" class="navbar-brand" href="#"><span class="opus"
+                        style="color: orange;">OPUS</span> Computers</a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item hvr-underline-from-center">
+                            <a class="nav-link " href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  hvr-underline-from-center">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item  hvr-underline-from-center">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown hvr-wobble-vertical">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="# ">Action</a>
+                                <a class="dropdown-item" href="# ">Another action</a>
+                                <a class="dropdown-item" href="# ">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Collapsible content -->
+
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <!-- select -->
+    <section class="sort-select">
+        <div class="select-box">
+            <div class="options-container">
+                <div class="options" onclick="lowToHigh()">
+                    <input type="radio" id="low-high" class="radio" name="category">
+                    <label for="low-high">Price Low to High</label>
+                </div>
+                <div class="options" onclick="highToLow()">
+                    <input type="radio" id="high-low" class="radio" name="category">
+                    <label for="high-low">Price High to Low</label>
+                </div>
+
+                <div class="options" onclick="customerRate()">
+                    <input type="radio" id="customer-rating" class="radio" name="category">
+                    <label for="customer-rating">Customer Rating</label>
+                </div>
+                <div class="options" onclick="aZ()">
+                    <input type="radio" id="a-z" class="radio" name="category">
+                    <label for="a-z">Brand A-Z</label>
+                </div>
+                <div class="options" onclick="zA()">
+                    <input type="radio" id="z-a" class="radio" name="category">
+                    <label for="z-a">Brand Z-A</label>
+                </div>
+            </div>
+            <div class="selected">Best Selling</div>
+        </div>
+    </section>
+    <!-- ./ Select . -->
+    <section id="category">
+        <div class="row">
+            <h2 class="stylish-search">Filter</h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" id="search-box" class="search-query form-control" placeholder="Search" />
+                </div>
+            </div>
+        </div>
+        <div class="brand">
+            <h1 class="brand-h1">Brand</h1>
+            <a class="arrow hvr-icon-hang" href="#"><i class="fas hvr-icon fa-3x fa-angle-down"></i></a>
+        </div>
+        <div class="brand-items">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">All</a>
+                </div>
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">Apple</a>
+                </div>
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">Lenovo</a>
+                </div>
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">HP</a>
+                </div>
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">Acer</a>
+                </div>
+                <div class="col-lg-6 col-md-12 hvr-skew">
+                    <a class="boo" href="#">Asus</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="main-body">
+        <div id="products" class="row">
+
+
+
+        </div>
+    </section>
+
+
+</body>
+<script src="icons/js/all.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+
+</html>

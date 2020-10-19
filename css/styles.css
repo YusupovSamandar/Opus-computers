@@ -1,0 +1,273 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar .container {
+    max-width: 1500px;
+}
+
+/* search */
+
+
+
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+}
+.nav-link {
+    padding: 15px;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+}
+
+.search-query:focus + button {
+    z-index: 3;   
+}
+
+  
+/*./search*/
+
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+    box-shadow: 10px 10px 50px #333;
+}
+.nav-item {
+    margin-right: 20px;
+}
+.navbar-brand {
+    font-family: 'Merienda', cursive;
+    font-size: 2rem;
+    margin-left: 15px;
+}
+#sort{
+    padding: 10px;
+    border-radius: 0 15px;
+}
+.stylish-search{
+    font-family: 'Merienda', cursive;
+    animation: search 10s infinite;
+    font-size: 2rem;
+    padding: 9px;
+    color: #fff;
+}
+@keyframes search{
+    0% {color: #cda45e;}
+    40% {color: rgb(166, 255, 0);}
+    100% {color: aqua;}
+}
+.opus{
+    animation: example 10s infinite;
+}
+@keyframes example{
+    0% {color: orange;}
+    25% {color: blue;}
+    50% {color: red;}
+    75% {color: orchid;}
+}
+.browser-default{
+    outline: none;
+    padding: 10px;border: 1px solid #333;border-radius: 0 15px;
+}
+#category{
+    width: 20%;
+    position: fixed;
+    background-color: #2a2424;
+    height: 100%;
+    padding: 150px 20px 0;
+    margin: 0 auto;
+    overflow-y: scroll;
+    border-radius: 0 8px 8px 0;
+}
+#category::-webkit-scrollbar{
+    width: 8px;
+    background: white;
+    border-radius: 0 8px 8px 0;
+}
+#category::-webkit-scrollbar-thumb{
+    width: 8px;
+    border-radius: 0 8px 8px 0;
+    background: #525861;
+}
+.brand-h1{
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    font-size: 2rem;
+    border-bottom: 2px solid #cda45e;
+}
+.arrow{
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+    left: 46%;
+}
+.brand-items {
+    margin-top: 50px;
+}
+.brand-items a{
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: aqua;
+    padding: 20px;
+    letter-spacing: 3;
+}
+.brand-items a:hover{
+    text-decoration: underline;
+}
+.main-body {
+    margin-left: 25%;
+    padding-top: 10%;
+    margin-right: 5%;
+}
+.main-body .col-md-4 {
+    margin: 50px 0;
+    cursor: pointer;
+}
+h4{
+    font-family: 'Merienda', cursive;
+}
+img{
+    height: 300px;
+}
+h3{
+    font-family: 'Merienda', cursive;
+}
+.card{
+    height: 598px;
+}
+
+
+
+
+
+/* select style */
+.select-box{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+.select-box .options-container{
+    background: #2f362f;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+
+.selected {
+    background: #2f3640;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+    user-select: none;
+}
+
+.selected::after{
+    content: "";
+    background: url("../arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    right: 10px;
+    top: 7px;
+    transition: all 0.4s;
+}
+.select-box .options-container.active + .selected::after{
+    transform: rotateX(180deg);
+    top: -5px;
+}
+
+.select-box .options-container.active {
+    max-height: 160px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb{
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options, .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box .options:hover{
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+.select-box .options .radio {
+    display: none;
+}
+
+.sort-select {
+    position: fixed;
+    z-index: 4;
+    right: 10%;
+    top: 25px;
+}
+
+
+/* ./ select style / */
